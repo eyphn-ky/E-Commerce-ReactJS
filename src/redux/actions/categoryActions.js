@@ -5,7 +5,7 @@ export function changeCategory(category){
 
 export function getCategoriesSuccess(categories)//getCategories() fonksiyonu burayı çalıştırır.
 {
-    return {type:actionTypes.GET_CATEGORİES_SUCCESS, payload:categories}
+    return {type:actionTypes.GET_CATEGORİES_SUCCESS, payload:categories}//bir obje dönüyor obje payload ve type taşıyor
 }
 
 export function getCategories(){ //bu fonksiyonu çağırırız //bu fonksiyonu redux thunk ile bağlarız
