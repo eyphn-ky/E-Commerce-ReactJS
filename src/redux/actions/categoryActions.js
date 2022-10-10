@@ -5,13 +5,15 @@ export function changeCategory(category){
 
 export function getCategoriesSuccess(categories)//getCategories() fonksiyonu burayı çalıştırır.
 {
-    return {type:actionTypes.GET_CATEGORİES_SUCCESS, payload:categories}//bir obje dönüyor obje payload ve type taşıyor
+    return {type:actionTypes.GET_CATEGORIES_SUCCESS, payload:categories}//bir obje dönüyor obje payload ve type taşıyor
 }
 
 export function getCategories(){ //bu fonksiyonu çağırırız //bu fonksiyonu redux thunk ile bağlarız
-    return function(dispacth){
+
+    return function(dispatch){
         let url="http://localhost:3000/categories"
+
         return fetch(url).then(response=>response.json())
-        .then(result=>dispacth(getCategoriesSuccess(result)));
+                         .then(result=>dispatch(getCategoriesSuccess(result)));
     }
 }
