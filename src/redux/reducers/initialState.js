@@ -2,5 +2,6 @@ export default{ //stateleri daha iyi yönetebilmek için bir merkezde tanımlad�
     currentCategory:{},
     categories:[],
     products:[],
-    cart:[]
+    cart:[],
+    savedProduct:{} 
 }
